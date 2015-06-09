@@ -8,7 +8,7 @@
 ;; URL: https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus
 ;; Created: May 24 2015
 ;; Keywords: emacs emoji
-;; Package-Requires: ((emacs "24") (popwin "1.0.0") (helm "1.6.4"))
+;; Package-Requires: ((emacs "24") (helm "1.6.4"))
 
 
 ;; This program is free software; you can redistribute it and/or
