@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013 by Shingo Fukuyama
 ;; Copyright (C) 2015 by Sylvain Benner
 
-;; Version: 1.1
+;; Version: 1.2
 ;; Author: Sylvain Benner (based on the work of Shingo Fukuyama)
 ;; URL: https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus
 ;; Created: May 24 2015
