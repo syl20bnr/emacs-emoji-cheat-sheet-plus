@@ -167,12 +167,16 @@
 (defun emoji-cheat-sheet-plus-buffer ()
   "Open a new buffer with all the emojis."
   (interactive)
-  (emoji-cheat-sheet-plus--create-cache)
-  (with-current-buffer (get-buffer-create emoji-cheat-sheet-plus--buffer-name)
-    (erase-buffer)
-    (pop-to-buffer (current-buffer))
-    (emoji-cheat-sheet-plus--create-buffer)
-    (emoji-cheat-sheet-plus-buffer-mode)))
+  (let ((buffer (get-buffer emoji-cheat-sheet-plus--buffer-name)))
+    (if (buffer-live-p buffer)
+        (pop-to-buffer buffer)
+      (setq buffer (get-buffer-create emoji-cheat-sheet-plus--buffer-name))
+      (emoji-cheat-sheet-plus--create-cache)
+      (with-current-buffer buffer
+        (erase-buffer)
+        (pop-to-buffer buffer)
+        (emoji-cheat-sheet-plus--create-buffer)
+        (emoji-cheat-sheet-plus-buffer-mode)))))
 
 (define-derived-mode emoji-cheat-sheet-plus-buffer-mode
   fundamental-mode "Emoji-Cheat-Sheet"
