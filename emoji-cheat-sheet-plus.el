@@ -265,7 +265,10 @@
 
 (defun emoji-cheat-sheet-plus--changed-hook (start end length)
   "Hook function for `after-change-functions' to display emoji image."
-  (emoji-cheat-sheet-plus--display-region (line-beginning-position) end))
+  (setq start (save-excursion
+                (goto-char start)
+                (line-beginning-position)))
+  (emoji-cheat-sheet-plus--display-region start end))
 
 (defun emoji-cheat-sheet-plus--display-region (start end)
   "Add emoji display properties to passed region."
