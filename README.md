@@ -22,7 +22,7 @@ This fork proposes the following additional feature:
 - new minor mode: `emoji-cheat-sheet-plus-display-mode` replacing emoji codes
   in buffer by the its image,
 - new function: `emoji-cheat-sheet-plus-insert` to insert an emoji at point
-  using an helm front-end. It is the possible to insert several emoji thanks
+  using an helm front-end. It is possible to insert several emoji thanks
   to helm persistent action or its multiple selection feature.
 
 ## Using emoji-cheat-sheet-plus :electric_plug:
