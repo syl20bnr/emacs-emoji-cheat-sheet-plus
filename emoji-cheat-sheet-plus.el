@@ -136,8 +136,7 @@
   (interactive)
   (let ((code (emoji-cheat-sheet-plus--code-under-point)))
     (when code
-      (when copy
-        (kill-new (match-string-no-properties 0)))
+      (when copy (kill-new code))
       (message (format "%s%s" code (if copy " (copied to kill ring)" ""))))))
 
 (defun emoji-cheat-sheet-plus-echo-and-copy ()
